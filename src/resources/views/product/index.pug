@@ -1,0 +1,86 @@
+extends ../layout
+block content 
+  div.index_product
+    h1.index_product_title Page Product List 
+    div.index_product_block_create
+      a(href="/create").link_create Create Product
+      -
+        let checkedSearch
+        console.log(search)
+        if(search!==undefined){
+          checkedSearch = true
+        }else{
+          checkedSearch=false
+        }
+      div(data-search=checkedSearch).search
+        form(action="/",method="post")
+          input(type="text",placeholder="search...",name="search").inputSearch 
+          button(type="submit") search
+          a(href="/").btn_allProduct all product
+    -
+      let checkedFilter
+      if(filter!==undefined)
+       {checkedFilter=filter}
+      else{
+        checkedFilter = ""
+      }
+    div(data-filter=checkedFilter).index_product_block_filter
+      form(action="/" method="post").formFilter
+        div.price.container 
+          p Price 
+          div.filter_price_less.filter_input
+            input(type="radio",name="filter",value="price < 10").inputFilter
+            span < 10
+          div.filter_price_bigger.filter_input
+            input(type="radio",name="filter",value="price > 10").inputFilter
+            span > 10
+        div.status.container
+          p Status 
+          div.filter_status_publish.filter_input
+            input(type="radio",name="filter",value="status_product publish").inputFilter
+            span publish
+          div.filter_status_hidden.filter_input
+            input(type="radio",name="filter",value="status_product hidden").inputFilter
+            span hidden
+        div.clearFilter 
+          a(href="/") clear filter
+    div.index_product_block_table
+      table 
+          thead 
+            tr 
+              th 
+                p Image 
+              th 
+                p Name 
+              th 
+                p Price 
+              th 
+                p Status 
+              th 
+                p Action 
+              
+          tbody 
+            if products !== null && products.length>0
+              each item in products 
+                tr 
+                  td
+                    img(src=`/uploads/${item.image_product}`, alt="")
+                  td=item.name_product 
+                  td=item.price_product
+                  td
+                    if item.status_product
+                      .publish
+                        p publish
+                    else 
+                      .hidden 
+                        p hidden
+                  td 
+                    a(href=`/update/${item.id}`).link_update Update 
+                    span |
+                    a(href=`/delete/${item.id}`).link_delete Delete
+            else 
+                tr
+                  td(colspan=5,class="td_nodata") 
+                    p No data !
+block script
+  script(src="javascripts/product_index.js") 

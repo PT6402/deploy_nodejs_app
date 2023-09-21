@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+  html::-webkit-scrollbar {
+    width: 1rem; }
+  html::-webkit-scrollbar-track {
+    background: #f2f2f2;
+    border-radius: 100vw; }
+  html::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 100vw; }
+  html::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-size: 1.2rem; }
+
+input,
+textarea,
+select {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem; }
+
+input[type="password"] {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.2rem; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  color: inherit; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+ul {
+  list-style: none; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 1.6rem; }
+
+p {
+  font-size: 1.6rem; }
+
+#layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.index_product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem; }
+  .index_product_title {
+    margin-bottom: 2rem; }
+  .index_product_block_create {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .index_product_block_create .link_create {
+      display: block;
+      padding: 0.5rem 1rem;
+      border: 0.2rem solid #ccc;
+      border-radius: 2rem; }
+    .index_product_block_create .search form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row; }
+      .index_product_block_create .search form input {
+        display: block;
+        margin-left: 0.5rem;
+        border: 0.2rem solid #ccc;
+        height: 100%;
+        font-size: 1.5rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        padding: 0.25rem 1rem;
+        margin-right: 0.1rem; }
+      .index_product_block_create .search form button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border: 0.2rem solid #ccc;
+        padding: 0.58rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        display: block; }
+      .index_product_block_create .search form a {
+        margin-left: 1rem;
+        display: block;
+        padding: 0.5rem;
+        border: 0.2rem solid #ccc;
+        border-radius: 1rem; }
+  .index_product_block_filter {
+    width: 100%; }
+    .index_product_block_filter form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+      width: 100%; }
+      .index_product_block_filter form div {
+        border: 0.2rem solid #ccc;
+        border-radius: 1rem;
+        margin: 0.5rem 0;
+        padding: 0.5rem; }
+        .index_product_block_filter form div a {
+          display: block;
+          padding: 1.2rem; }
+        .index_product_block_filter form div p {
+          margin-right: 2rem; }
+        .index_product_block_filter form div div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 1rem;
+          cursor: pointer; }
+          .index_product_block_filter form div div span {
+            pointer-events: none; }
+          .index_product_block_filter form div div input {
+            pointer-events: none;
+            margin-right: 0.2rem;
+            cursor: pointer; }
+      .index_product_block_filter form .price {
+        display: flex;
+        justify-content: start;
+        align-items: center; }
+      .index_product_block_filter form .status {
+        display: flex;
+        justify-content: start;
+        align-items: center; }
+    .index_product_block_filter form .checkedInput {
+      background-color: #ff6666; }
+  .index_product_block_table table {
+    margin-top: 2rem;
+    border-collapse: collapse; }
+    .index_product_block_table table thead tr th {
+      padding: 0 1rem; }
+      .index_product_block_table table thead tr th p {
+        border-bottom: 0.2rem solid #ccc;
+        padding: 0 1rem;
+        text-align: center; }
+    .index_product_block_table table tbody tr td {
+      text-align: center;
+      padding: 1rem; }
+      .index_product_block_table table tbody tr td img {
+        width: 7rem;
+        height: 7rem;
+        padding: 0.5rem;
+        border: 0.2rem solid #ccc;
+        border-radius: 1rem; }
+      .index_product_block_table table tbody tr td a {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem; }
+      .index_product_block_table table tbody tr td .link_update {
+        background-color: #a7ccff; }
+      .index_product_block_table table tbody tr td .link_delete {
+        background-color: #ff6666; }
+      .index_product_block_table table tbody tr td p {
+        padding: 0.2rem;
+        font-size: 1.2rem;
+        cursor: default; }
+      .index_product_block_table table tbody tr td .publish {
+        background-color: #b0d9b1;
+        border-radius: 0.5rem; }
+      .index_product_block_table table tbody tr td .hidden {
+        background-color: #ccc;
+        border-radius: 0.5rem; }
+    .index_product_block_table table tbody tr:not(:last-child) {
+      border-bottom: 0.2rem solid #ccc; }
+
+.create_product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem; }
+  .create_product_title {
+    margin-bottom: 1rem; }
+  .create_product_block_create form .block_input {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%; }
+    .create_product_block_create form .block_input label {
+      display: block; }
+    .create_product_block_create form .block_input input {
+      display: block;
+      margin-left: 0.5rem;
+      border: 0.2rem solid #ccc;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%; }
+    .create_product_block_create form .block_input .input {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      width: 100%; }
+    .create_product_block_create form .block_input_status {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center; }
+      .create_product_block_create form .block_input_status label {
+        width: fit-content; }
+      .create_product_block_create form .block_input_status .inputCheckbox {
+        display: block;
+        position: relative;
+        width: fit-content;
+        height: 3rem;
+        padding: 10rem; }
+    .create_product_block_create form .block_input_image input {
+      border: none; }
+    .create_product_block_create form .block_input_image .block_image {
+      margin-left: 0.5rem;
+      width: 10rem;
+      height: 10rem;
+      border: 0.2rem solid #ccc;
+      border-radius: 1rem;
+      position: relative; }
+      .create_product_block_create form .block_input_image .block_image img {
+        padding: 0.5rem;
+        position: relative;
+        z-index: 2; }
+      .create_product_block_create form .block_input_image .block_image .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1; }
+        .create_product_block_create form .block_input_image .block_image .icon svg {
+          width: 5rem;
+          height: 5rem; }
+    .create_product_block_create form .block_input_submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .create_product_block_create form .block_input_submit button {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        border-radius: 0.5rem; }
+
+.update_product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem; }
+  .update_product_title {
+    margin-bottom: 1rem; }
+  .update_product_block_create form .block_input {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%; }
+    .update_product_block_create form .block_input label {
+      display: block; }
+    .update_product_block_create form .block_input input {
+      display: block;
+      margin-left: 0.5rem;
+      border: 0.2rem solid #ccc;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%; }
+    .update_product_block_create form .block_input .input {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      width: 100%; }
+    .update_product_block_create form .block_input_image input {
+      border: none; }
+    .update_product_block_create form .block_input_image .block_image {
+      margin-left: 0.5rem;
+      width: 10rem;
+      height: 10rem;
+      border: 0.2rem solid #ccc;
+      border-radius: 1rem;
+      position: relative; }
+      .update_product_block_create form .block_input_image .block_image img {
+        padding: 0.5rem;
+        position: relative;
+        z-index: 2; }
+      .update_product_block_create form .block_input_image .block_image .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1; }
+        .update_product_block_create form .block_input_image .block_image .icon svg {
+          width: 5rem;
+          height: 5rem; }
+    .update_product_block_create form .block_input_submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .update_product_block_create form .block_input_submit button {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        border-radius: 0.5rem; }
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  cursor: pointer;
+  --slide-distance: 2.2rem;
+  --slider-size: 2rem;
+  --slider-padding: 0.3rem;
+  --transition-duration: 200ms; }
+
+.slider {
+  flex-shrink: 0;
+  width: calc( var(--slider-size) + var(--slide-distance) + var(--slider-padding) * 2);
+  padding: var(--slider-padding);
+  border-radius: 9999px;
+  background-color: #d1d5db;
+  transition: background-color var(--transition-duration); }
+  .slider::after {
+    content: "";
+    display: block;
+    width: var(--slider-size);
+    height: var(--slider-size);
+    background-color: #fff;
+    border-radius: 9999px;
+    transition: transform var(--transition-duration); }
+
+input:checked + .slider {
+  background-color: rgba(0, 0, 0, 0.8); }
+  input:checked + .slider::after {
+    transform: translateX(var(--slide-distance)); }
+
+input:focus-visible + .slider {
+  outline-offset: 2px;
+  outline: 2px solid #0066cc; }
+
+.label {
+  line-height: 1.5; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0; }

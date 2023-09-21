@@ -1,0 +1,83 @@
+.create_product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem; }
+  .create_product_title {
+    margin-bottom: 1rem; }
+  .create_product_block_create form .block_input {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%; }
+    .create_product_block_create form .block_input label {
+      display: block; }
+    .create_product_block_create form .block_input input {
+      display: block;
+      margin-left: 0.5rem;
+      border: 0.2rem solid #ccc;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%; }
+    .create_product_block_create form .block_input .input {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      width: 100%; }
+    .create_product_block_create form .block_input_status {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center; }
+      .create_product_block_create form .block_input_status label {
+        width: fit-content; }
+      .create_product_block_create form .block_input_status .inputCheckbox {
+        display: block;
+        position: relative;
+        width: fit-content;
+        height: 3rem;
+        padding: 10rem; }
+    .create_product_block_create form .block_input_image input {
+      border: none; }
+    .create_product_block_create form .block_input_image .block_image {
+      margin-left: 0.5rem;
+      width: 10rem;
+      height: 10rem;
+      border: 0.2rem solid #ccc;
+      border-radius: 1rem;
+      position: relative; }
+      .create_product_block_create form .block_input_image .block_image img {
+        padding: 0.5rem;
+        position: relative;
+        z-index: 2; }
+      .create_product_block_create form .block_input_image .block_image .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1; }
+        .create_product_block_create form .block_input_image .block_image .icon svg {
+          width: 5rem;
+          height: 5rem; }
+    .create_product_block_create form .block_input_submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .create_product_block_create form .block_input_submit button {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        border-radius: 0.5rem; }

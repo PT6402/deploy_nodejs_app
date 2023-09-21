@@ -1,0 +1,12 @@
+label
+  span.label Status Product
+  input(type="hidden",name="status_product",id="hiddenStatus_product",value="false")
+  -
+    let check
+    if(product==undefined){
+      check = false
+    }else{
+      check = product.status_product
+    }
+  input#my-toggle.sr-only(type='checkbox' name='status_product',checked=check)
+  .slider

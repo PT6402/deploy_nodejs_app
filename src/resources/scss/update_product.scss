@@ -1,0 +1,89 @@
+.update_product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  &_title {
+    margin-bottom: 1rem;
+  }
+  &_block_create {
+    form {
+      .block_input {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        width: 100%;
+        label {
+          display: block;
+        }
+        input {
+          display: block;
+          margin-left: 0.5rem;
+          border: 0.2rem solid #ccc;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          width: 100%;
+        }
+        .input {
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          flex-direction: column;
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+        &_image {
+          input {
+            border: none;
+          }
+          .block_image {
+            margin-left: 0.5rem;
+            width: 10rem;
+            height: 10rem;
+            border: 0.2rem solid #ccc;
+            border-radius: 1rem;
+            position: relative;
+            img {
+              padding: 0.5rem;
+              position: relative;
+              z-index: 2;
+            }
+            .icon {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 1;
+              svg {
+                width: 5rem;
+                height: 5rem;
+              }
+            }
+          }
+        }
+        &_submit {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          button {
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

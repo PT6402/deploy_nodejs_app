@@ -1,0 +1,181 @@
+.index_product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  &_title {
+    margin-bottom: 2rem;
+  }
+  &_block_create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .link_create {
+      display: block;
+      padding: 0.5rem 1rem;
+      border: 0.2rem solid #ccc;
+      border-radius: 2rem;
+    }
+    .search {
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        input {
+          display: block;
+          margin-left: 0.5rem;
+          border: 0.2rem solid #ccc;
+          // width: 50%;
+          height: 100%;
+          font-size: 1.5rem;
+          border-top-left-radius: 1rem;
+          border-bottom-left-radius: 1rem;
+          padding: 0.25rem 1rem;
+          margin-right: 0.1rem;
+        }
+        button {
+          border: none;
+          outline: none;
+          cursor: pointer;
+          // height: 100%;
+          border: 0.2rem solid #ccc;
+
+          padding: 0.58rem;
+          border-top-right-radius: 1rem;
+          border-bottom-right-radius: 1rem;
+          display: block;
+        }
+        a {
+          margin-left: 1rem;
+          display: block;
+          padding: 0.5rem;
+          border: 0.2rem solid #ccc;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+  &_block_filter {
+    width: 100%;
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+      width: 100%;
+      div {
+        border: 0.2rem solid #ccc;
+        border-radius: 1rem;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        a {
+          display: block;
+          padding: 1.2rem;
+        }
+        p {
+          margin-right: 2rem;
+        }
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 1rem;
+          cursor: pointer;
+          span {
+            pointer-events: none;
+          }
+          input {
+            pointer-events: none;
+            margin-right: 0.2rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .price {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .filter_price_bigger {
+        }
+      }
+      .status {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+    }
+    form .checkedInput {
+      background-color: #ff6666;
+    }
+  }
+  &_block_table {
+    table {
+      margin-top: 2rem;
+      // border: 0.2rem solid #ccc;
+      border-collapse: collapse;
+
+      thead {
+        tr {
+          th {
+            padding: 0 1rem;
+            p {
+              border-bottom: 0.2rem solid #ccc;
+              padding: 0 1rem;
+              text-align: center;
+            }
+          }
+          th:not(:last-child) {
+            // border-right: 0.1rem solid #ccc;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            text-align: center;
+            padding: 1rem;
+            img {
+              width: 7rem;
+              height: 7rem;
+              padding: 0.5rem;
+              border: 0.2rem solid #ccc;
+              border-radius: 1rem;
+            }
+            a {
+              padding: 0.5rem 1rem;
+              border-radius: 0.5rem;
+            }
+            .link_update {
+              background-color: #a7ccff;
+            }
+            .link_delete {
+              background-color: #ff6666;
+            }
+            p {
+              padding: 0.2rem;
+              font-size: 1.2rem;
+              cursor: default;
+            }
+            .publish {
+              background-color: #b0d9b1;
+              border-radius: 0.5rem;
+            }
+            .hidden {
+              background-color: #ccc;
+              border-radius: 0.5rem;
+            }
+          }
+        }
+        tr:not(:last-child) {
+          border-bottom: 0.2rem solid #ccc;
+        }
+      }
+    }
+  }
+}

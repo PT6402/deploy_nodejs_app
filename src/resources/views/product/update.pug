@@ -1,0 +1,24 @@
+extends ../layout
+block content
+  div.update_product
+    h1.update_product_title Page Update Product
+    div.update_product_block_create
+      form(action="/update",method="post",enctype='multipart/form-data')
+        input(type="hidden",name="id",value=product._id)
+        input(type="hidden",name="old_image",value=product.image_product)
+        div.block_input
+          div.block_input_name.input 
+            lable Name Prodduct 
+            input(type="text" name="name_product",value=product.name_product,required)
+          div.block_input_price.input 
+            lable Price Prodduct 
+            input(type="text" name="price_product",value=product.price_product,required).inputPrice
+          div.block_input_status
+            include checkbox
+          div.block_input_image.input 
+            include button_upload
+          div.block_input_submit.input
+            button(type="submit") update product
+block script 
+    script(src="/javascripts/upload_image.js") 
+    script(src="/javascripts/checkbox.js") 

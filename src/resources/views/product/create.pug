@@ -1,0 +1,24 @@
+extends ../layout
+block content 
+  div.create_product
+    h1.create_product_title Page Create Product
+    div.create_product_block_create
+      form(action="/create",method="post",enctype='multipart/form-data')
+        div.block_input
+          div.block_input_name.input 
+            label Name Prodduct 
+            input(type="text" name="name_product",required)
+          div.block_input_price.input 
+            label Price Prodduct 
+            input(type="text" name="price_product",required).inputPrice
+          div.block_input_status
+            include checkbox
+          div.block_input_image.input 
+            include button_upload
+          div.block_input_submit.input
+            button(type="submit") create product
+    
+block script 
+  script(src="/javascripts/upload_image.js") 
+  script(src="/javascripts/checkbox.js") 
+  
