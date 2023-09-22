@@ -1,16 +1,19 @@
 const path = require("path");
+const fs = require("fs").promises;
 const ProductController = require("../controllers/ProductController");
 const multer = require("multer");
+const uploadImage = path.join("public/uploads");
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
+  destination: async (req, file, cb) => {
     try {
-      cb(null, path.join(__dirname, "public/uploads"));
+      await fs.mkdir(uploadImage);
     } catch (err) {
       console.log(err);
     }
+    cb(null, "public/uploads");
   },
   filename: (req, file, cb) => {
-    cb(null, `${file.fieldname}_${file.originalname}`);
+    cb(null, `${file.fieldname}_${Date.now()}_${file.originalname}`);
   },
 });
 const upload = multer({ storage }).single("image");
