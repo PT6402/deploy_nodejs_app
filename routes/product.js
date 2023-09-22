@@ -3,7 +3,7 @@ const multer = require("multer");
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     try {
-      cb(null, "./uploads");
+      cb(null, "uploads");
     } catch (err) {
       console.log(err);
     }
