@@ -1,10 +1,9 @@
-const path = require("path");
 const ProductController = require("../controllers/ProductController");
 const multer = require("multer");
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     try {
-      cb(null, path.join(__dirname, "public/uploads/"));
+      cb(null, "public/uploads");
     } catch (err) {
       console.log(err);
     }
