@@ -41,7 +41,7 @@ const ProductController = {
     // return res.send(req.body);
     if (req.file) {
       try {
-        fs.unlinkSync("src/public/uploads/" + old_image);
+        fs.unlinkSync("public/uploads/" + old_image);
         newImage = req.file.filename;
       } catch (error) {
         console.log(error);
@@ -61,7 +61,7 @@ const ProductController = {
     const id = req.params.id;
     const product = await Product_model.findByIdAndDelete(id);
     try {
-      fs.unlinkSync("src/public/uploads/" + product.image_product);
+      fs.unlinkSync("public/uploads/" + product.image_product);
     } catch (error) {
       console.log(error);
     }
