@@ -2,7 +2,11 @@ const ProductController = require("../controllers/ProductController");
 const multer = require("multer");
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "/publish/uploads");
+    try {
+      cb(null, "./uploads");
+    } catch (err) {
+      console.log(err);
+    }
   },
   filename: (req, file, cb) => {
     cb(null, `${file.fieldname}_${Date.now()}_${file.originalname}`);
