@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //static file
 // app.use("/uploads", express.static("uploads"));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("/public"));
 //file view
 app.set("view engine", "pug");
 app.set("views", path.resolve(__dirname, "resources/views"));
