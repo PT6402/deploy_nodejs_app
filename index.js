@@ -2,11 +2,11 @@ const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
 const app = express();
+dotenv.config();
 const PORT = process.env.PORT || 8000;
 const HOST = process.env.HOST || "0.0.0.0";
 const routes = require("./routes");
 const morgan = require("morgan");
-dotenv.config();
 
 const database = require("./database");
 // log console
